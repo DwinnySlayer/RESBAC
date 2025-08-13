@@ -1,11 +1,11 @@
 .main-layout {
   display: flex;
-  height: 100vh; /* optional, for full height */
-  overflow: hidden; /* prevent horizontal scroll */
+  height: 100vh;
+  overflow: hidden;
 }
 
 .sidebar {
-  width: 240px; /* or your preferred sidebar width */
+  width: 240px;
   flex-shrink: 0;
 }
 
@@ -15,7 +15,7 @@
 }
 
 
-/* Responsive: stack vertically on small screens */
+/* stack vertically on small screens */
 @media (max-width: 768px) {
   .main-layout {
     flex-direction: column;
