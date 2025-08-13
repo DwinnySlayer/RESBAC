@@ -1,0 +1,178 @@
+/* ===== General Layout ===== */
+.home-tab {
+  background-color: #FAFAFA;
+  min-height: 100vh;
+  padding: 16px;
+  font-family: sans-serif;
+  margin-top: 10px;
+}
+
+/* ===== Header (Welcome & Menu) ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.welcome-text {
+  font-size: 22px;
+}
+
+.admin-name {
+  color: #007BFF;
+}
+
+.header-right {
+  position: relative;
+}
+
+.ellipsis-icon {
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.reset-btn {
+  background: none;
+  border: none;
+  color: red;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* ===== Search Bar ===== */
+.input-holder {
+  margin-bottom: 22px;
+}
+
+.search-bar {
+  width: 489px;
+  height: 33px;
+  background-color: #FAFAFA;
+  border: 1.1px solid #007BFF;
+  padding: 8px 8px 8px 20px;
+  border-radius: 22px;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.search-bar:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+/* ===== Main Content Row ===== */
+.content-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Map section */
+.map-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.map-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  width: 830px;
+  height: 510px;
+}
+
+.map-image {
+  width: 830px;
+  height: auto;
+  display: block;
+}
+
+/* Info section */
+.info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+/* ===== Section Headers ===== */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-logo {
+  width: 24px;
+  height: 24px;
+}
+
+.title-text {
+  font-size: 19px;
+  font-weight: 100;
+}
+
+.map-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.refresh-btn,
+.cluster-box {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 14px;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.refresh-btn {
+  cursor: pointer;
+}
+
+/* ===== Info Panel ===== */
+.info-panel {
+  background-color: #F3F4F8;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+  height: 200px;
+  align-content: center;
+}
+
+.info-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #555;
+}

@@ -1,0 +1,31 @@
+.main-layout {
+  display: flex;
+  height: 100vh; /* optional, for full height */
+  overflow: hidden; /* prevent horizontal scroll */
+}
+
+.sidebar {
+  width: 240px; /* or your preferred sidebar width */
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  overflow-x: hidden;
+}
+
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .main-layout > .sidebar {
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+  }
+}

@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import SideBar from './components/SideBar/SideBar/SideBar';
+import Home from './pages/Home/Home';
 
 function App() {
+  const title = "Welcome to RESBAC";
+  const likes = 50;
+  // macoconvert lahat into string...
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SideBar />
+      <div className="content">
+        <Home />
+        <h1>{title}</h1>
+        <p>This is a simple React application.</p>
+      </div>
     </div>
   );
 }

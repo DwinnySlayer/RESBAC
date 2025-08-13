@@ -1,0 +1,75 @@
+/* SIDEBAR ----------------------------------- */
+
+.sidebar {
+  width: 222px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  color: #1f2937;
+  font-size: 15px;
+  height: 22px;
+}
+
+.nav-item img.icon {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+/* Hover for inactive */
+.nav-item:not(.active):hover {
+  color: #0060FF;
+}
+
+/* Active state */
+.nav-item.active {
+  background: #0060FF;
+  color: #ffffff; /* text white */
+  height: 22px;
+}
+
+/* Keep active text white on hover */
+.nav-item.active:hover {
+  background: #0060FF;
+  color: #ffffff;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 14px 12px;
+  /* border-bottom: 1px solid #919191; */
+  margin-top: 11px;
+}
+
+.resbac-logo {
+  width: 28px;
+  height: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.resbac-text {
+  font-weight: 700;
+  font-size: 22px;
+  color: #0b5bd3;
+  letter-spacing: 0.5px;
+}
+
