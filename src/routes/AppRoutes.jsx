@@ -2,6 +2,8 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import HomeTab from "../pages/Home/Home";
 import RescueTeams from "../pages/RescueTeams/RescueTeams";
+import Vulnerables from "../pages/Vulnerables/Vulnerables";
+import Alerts from "../pages/Alerts/Alerts";
 // ... other imports
 
 export default function AppRoutes() {
@@ -15,6 +17,8 @@ export default function AppRoutes() {
         <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<HomeTab />} />
         <Route path="/rescue-teams" element={<RescueTeams />} />
+        <Route path="/vulnerables" element={<Vulnerables />} />
+        <Route path="/alerts" element={<Alerts />} />
         {/* ...other tabs */}
       </Route>
     </Routes>

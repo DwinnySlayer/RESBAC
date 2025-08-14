@@ -4,12 +4,12 @@ import Dropdown from "../../components/Dropdown";
 
 export default function RescueTeamsTab() {
   const [isOpen, setIsOpen] = useState(true);
-  const [cluster, setCluster] = useState("blue");
+  const [cluster, setCluster] = useState("Cluster Blue");
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
 
   const clusters = [
-    { name: "Cluster Blue", color: "#3B82F6" },
+    { name: "Cluster Blue", color: "#007BFF" },
     { name: "Cluster Red", color: "#EF4444" },
     { name: "Cluster Green", color: "#10B981" },
   ];
@@ -34,7 +34,7 @@ export default function RescueTeamsTab() {
     alert("Link copied to clipboard!");
   };
 
-  const clusterColor = clusters.find(c => c.name.toLowerCase().includes(cluster))?.color || "#3B82F6";
+  const clusterColor = clusters.find(c => c.name.toLowerCase().includes(cluster))?.color || "#007BFF";
 
   return (
     <div className="rescue-tab">
@@ -50,10 +50,19 @@ export default function RescueTeamsTab() {
         <input type="text" placeholder="Search..." className="search-bar" />
 
         <div className="controls">
-          <label className="switch">
-            <input type="checkbox" checked={isOpen} onChange={() => setIsOpen(!isOpen)} />
-            <span className="slider"></span>
+          <label className="toggle">
+            <input
+              type="checkbox"
+              checked={isOpen}
+              onChange={() => setIsOpen(!isOpen)}
+            />
+            <span
+              className="toggle-label"
+              data-on="ON"
+              data-off="OFF"
+            ></span>
           </label>
+
 
           <button className="copy-btn" onClick={copyLink}>Copy Link</button>
 
@@ -93,7 +102,7 @@ export default function RescueTeamsTab() {
           </tbody>
         </table>
       ) : (
-        <div className="closed-message">Click Open to view list</div>
+        <div className="closed-message">Turn on to view list</div>
       )}
     </div>
   );

@@ -54,73 +54,90 @@
 }
 
 /* ===== Switch ===== */
-.switch {
+/* ===== Modern On/Off Toggle ===== */
+.toggle {
   position: relative;
   display: inline-block;
-  width: 42px;
-  height: 22px;
+  width: 70px;
+  height: 32px;
+  font-family: sans-serif;
 }
 
-.switch input {
+.toggle input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.slider {
+.toggle-label {
   position: absolute;
-  cursor: pointer;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #ccc;
-  border-radius: 22px;
-  transition: 0.4s;
+  background-color: #e4e4e4;
+  border-radius: 32px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #555;
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  border-radius: 50%;
-  transition: 0.4s;
+.toggle-label::before {
+  content: attr(data-off);
 }
 
-input:checked + .slider {
-  background-color: #2196F3;
+input:checked + .toggle-label {
+  background-color: #007BFF;
+  color: #fff;
 }
 
-input:checked + .slider:before {
-  transform: translateX(20px);
+input:checked + .toggle-label::before {
+  content: attr(data-on);
 }
+
 
 /* ===== Buttons ===== */
 .copy-btn {
-  border: 1px solid #2196F3;
-  color: #2196F3;
+  border: 1px solid #007BFF;
+  color: #007BFF;
   background: transparent;
-  padding: 4px 10px;
+  padding: 6px 14px;
   border-radius: 20px;
   cursor: pointer;
+  font-size: 16px;
+  width: 111px;
 }
 
 .total-box {
-  border: 1px solid #DEDEDE;
-  padding: 4px 10px;
+  border: 1px solid #007BFF;
+  padding: 6px 22px;
   border-radius: 20px;
 }
 
 /* ===== Table ===== */
 .data-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate; /* keep separate so border-radius works */
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.data-table th, .data-table td {
+.data-table th,
+.data-table td {
   padding: 8px;
-  border: 1px solid #ddd;
+  text-align: left;
+  border-top: 1px solid #ddd;     /* horizontal line above */
+  border-bottom: 1px solid #ddd;  /* horizontal line below */
+  border-left: none;              /* hide vertical line */
+  border-right: none;             /* hide vertical line */
+}
+
+/* Remove top border from the first row */
+.data-table thead th {
+  border-top: none;
 }
 
 .row-light {
@@ -136,3 +153,5 @@ input:checked + .slider:before {
   font-style: italic;
   color: #666;
 }
+
+

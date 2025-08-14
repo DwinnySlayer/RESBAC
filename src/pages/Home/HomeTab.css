@@ -57,7 +57,7 @@
 
 /* ===== Search Bar ===== */
 .input-holder {
-  margin-bottom: 22px;
+  margin-bottom: 11px;
 }
 
 .search-bar {
@@ -124,16 +124,17 @@
 .title-left {
   display: flex;
   align-items: center;
+  align-self:flex-end;
   gap: 8px;
 }
 
 .home-logo {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 }
 
 .title-text {
-  font-size: 19px;
+  font-size: 15px;
   font-weight: 100;
 }
 
