@@ -3,6 +3,7 @@
 import './SideBar.css';
 import { NavLink } from "react-router-dom";
 
+// imports kasi pngs ang icon natin xd
 import homeIcon from "../../../assets/home.png";
 import homeIconWhite from "../../../assets/home-white.png";
 import teamIcon from "../../../assets/team.png";

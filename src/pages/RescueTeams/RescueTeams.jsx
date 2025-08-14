@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./RescueTeams.css"; // we'll define styles here
+import "./RescueTeams.css";
+import Dropdown from "../../components/Dropdown";
 
 export default function RescueTeamsTab() {
   const [isOpen, setIsOpen] = useState(true);
@@ -13,7 +14,6 @@ export default function RescueTeamsTab() {
     { name: "Cluster Green", color: "#10B981" },
   ];
 
-  // Simulate remote fetch
   useEffect(() => {
     const dummyData = [
       { id: 1, name: "John Doe", age: 70, vulnerability: "Mobility Issues", address: "123 Elm St" },
@@ -26,8 +26,7 @@ export default function RescueTeamsTab() {
 
   const handleFilter = (selectedCluster) => {
     setCluster(selectedCluster.toLowerCase());
-    // TODO: Apply actual filter logic when backend is ready
-    setFilteredData(data);
+    setFilteredData(data); // replace with real filter later
   };
 
   const copyLink = () => {
@@ -39,34 +38,37 @@ export default function RescueTeamsTab() {
 
   return (
     <div className="rescue-tab">
-      {/* Header */}
+      {/* ===== Header ===== */}
       <div className="header">
-        <h1>Welcome, Admin Name</h1>
+        <h1 className="welcome-text">
+          Welcome, <span className="admin-name">Admin Name</span>
+        </h1>
+      </div>
+
+      {/* ===== Search + Controls Row ===== */}
+      <div className="search-controls">
         <input type="text" placeholder="Search..." className="search-bar" />
+
+        <div className="controls">
+          <label className="switch">
+            <input type="checkbox" checked={isOpen} onChange={() => setIsOpen(!isOpen)} />
+            <span className="slider"></span>
+          </label>
+
+          <button className="copy-btn" onClick={copyLink}>Copy Link</button>
+
+          <div className="total-box">Total: {filteredData.length}</div>
+
+          <Dropdown
+            options={["Cluster Blue", "Cluster Red", "Cluster Green"]}
+            value={cluster}
+            onChange={(c) => setCluster(c)}
+          />
+
+        </div>
       </div>
 
-      {/* Controls */}
-      <div className="controls">
-        <label className="switch">
-          <input type="checkbox" checked={isOpen} onChange={() => setIsOpen(!isOpen)} />
-          <span className="slider"></span>
-        </label>
-        <button className="copy-btn" onClick={copyLink}>Copy Link</button>
-        <div className="total-box">Total: {filteredData.length}</div>
-        <select
-          className="filter-btn"
-          value={cluster}
-          onChange={(e) => handleFilter(e.target.value)}
-        >
-          {clusters.map(c => (
-            <option key={c.name} value={c.name.split(" ")[1].toLowerCase()}>
-              {c.name}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {/* Table */}
+      {/* ===== Table ===== */}
       {isOpen ? (
         <table className="data-table">
           <thead style={{ backgroundColor: clusterColor, color: "#fff" }}>
