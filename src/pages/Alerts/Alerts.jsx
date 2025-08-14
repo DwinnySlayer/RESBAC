@@ -32,14 +32,18 @@ export default function AlertsTab() {
       id: 2,
       type: "fire",
       disaster: "Fire Warning - High Risk",
-      description: "Dry conditions may cause wildfires.",
+      description: `A fire has been reported in your area. Stay away from the affected zone. If you are near
+      [area], evacuate immediately and proceed to the nearest safe zone or evacuation center.
+      Rescue and firefighting teams are responding.`,
       active: false
     },
     {
       id: 3,
       type: "earthquake",
       disaster: "Earthquake Aftershock Warning",
-      description: "Possible aftershocks in the next 24 hours.",
+      description: `An earthquake has just occurred. If indoors, drop, cover, and hold on. After the shaking stops,
+      evacuate the building calmly. Check for injuries and hazards. Wait for further announcements
+      and emergency response instructions.`,
       active: false
     }
   ]);
