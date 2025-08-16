@@ -1,0 +1,107 @@
+.id-card {
+  width: 100%;              /* fill info-panel width */
+  height: 100%;             /* fill info-panel height */
+  background: transparent;  /* inherit info-panel background */
+  border-radius: 0;         /* rely on info-panel’s rounded corners */
+  padding: 0;               /* let info-panel padding apply */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* center content vertically */
+  align-items: flex-start;  /* left align text and image */
+  text-align: left;
+}
+
+/* Header with photo, name, and button */
+.id-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.id-card-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.id-photo {
+  width: 75px;
+  height: 75px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.id-name {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column; /* force first above last */
+}
+
+
+/* Status button */
+.status-btn {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background 0.2s;
+  margin-left: auto;
+}
+.status-btn.safe {
+  background-color: #007bff;
+  color: white;
+  padding: 6px 12px;
+}
+.status-btn.pending {
+  background-color: #EB3A32;
+  color: white;
+  padding: 6px 12px;
+}
+
+/* Section title */
+.info-section-title {
+  margin: 6px 0;
+  width: 100%;
+}
+.info-section-title span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #007bff;
+}
+.divider {
+  height: 0.2px;
+  background: #007bff;
+  margin-top: 2px;
+  width: 100%;
+}
+
+/* Info rows */
+.info-row {
+  margin-bottom: 6px;
+}
+.label {
+  font-size: 10px;
+  font-weight: 500;
+  color: #555;
+}
+.info-text {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+.info-row-horizontal {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+.info-row-horizontal > div {
+  flex: 1;
+}

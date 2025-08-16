@@ -3,11 +3,14 @@ import { EllipsisVertical, RefreshCcw, Calendar } from "lucide-react";
 import homeLogo from "../../assets/home.png";
 import "./HomeTab.css";
 import TumanaMap from "../../assets/TumanaMap.png";
+import IdInfo from "./IdInfo";
+import Mikyllah from "../../assets/mikyllah-grafilon.png";
 
 export default function HomeTab() {
   const [showMenu, setShowMenu] = useState(false);
   const [clusterCount, setClusterCount] = useState(0);
   const [currentDate, setCurrentDate] = useState("");
+  const [selectedPerson, setSelectedPerson] = useState(null);
 
   // Update date every second
   useEffect(() => {
@@ -81,13 +84,24 @@ export default function HomeTab() {
             </div>
           </div>
 
-          <div className="map-container">
-            <img
-              src={TumanaMap}
-              alt="Map of Tumana"
-              className="map-image"
-            />
+          <div
+            className="map-container"
+            onClick={() =>
+              setSelectedPerson({
+                photo: Mikyllah,
+                firstName: "Mikyllah",
+                lastName: "Grafilon",
+                address: "123 Brgy. Tumana, Marikina City",
+                contact: "09171234567",
+                age: 45,
+                emergencyContact: "Maria Dela Cruz - 09187654321",
+                vulnerability: "Senior Citizen"
+              })
+            }
+          >
+            <img src={TumanaMap} alt="Map of Tumana" className="map-image" />
           </div>
+
         </div>
 
         {/* Info Panel Section */}
@@ -100,9 +114,16 @@ export default function HomeTab() {
             </div>
           </div>
           <div className="info-panel">
-            Click on a pinpoint to see <br />
-            vulnerable individual..
+            {selectedPerson ? (
+              <IdInfo person={selectedPerson} />
+            ) : (
+              <>
+                Click on a pinpoint to see <br />
+                vulnerable individual..
+              </>
+            )}
           </div>
+
         </div>
       </div>
     </div>

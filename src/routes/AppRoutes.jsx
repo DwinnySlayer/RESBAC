@@ -4,7 +4,9 @@ import HomeTab from "../pages/Home/Home";
 import RescueTeams from "../pages/RescueTeams/RescueTeams";
 import Vulnerables from "../pages/Vulnerables/Vulnerables";
 import Alerts from "../pages/Alerts/Alerts";
-// ... other imports
+import ManualRequest from "../pages/ManualRequest/ManualRequest";
+import Account from "../pages/Account/Account";
+import ManagePoints from "../pages/ManagePoints/ManagePoints";
 
 export default function AppRoutes() {
   return (
@@ -19,7 +21,9 @@ export default function AppRoutes() {
         <Route path="/rescue-teams" element={<RescueTeams />} />
         <Route path="/vulnerables" element={<Vulnerables />} />
         <Route path="/alerts" element={<Alerts />} />
-        {/* ...other tabs */}
+        <Route path="/manual" element={<ManualRequest />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/points" element={<ManagePoints />} />
       </Route>
     </Routes>
   );

@@ -72,7 +72,7 @@
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background-color: #e4e4e4;
-  border-radius: 32px;
+  border-radius: 11px;
   transition: background-color 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -103,7 +103,7 @@ input:checked + .toggle-label::before {
   color: #007BFF;
   background: transparent;
   padding: 6px 14px;
-  border-radius: 20px;
+  border-radius: 11px;
   cursor: pointer;
   font-size: 16px;
   width: 111px;
@@ -112,7 +112,7 @@ input:checked + .toggle-label::before {
 .total-box {
   border: 1px solid #007BFF;
   padding: 6px 22px;
-  border-radius: 20px;
+  border-radius: 11px;
 }
 
 /* ===== Table ===== */

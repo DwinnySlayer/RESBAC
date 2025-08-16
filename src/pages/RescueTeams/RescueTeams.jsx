@@ -19,6 +19,15 @@ export default function RescueTeamsTab() {
       { id: 1, name: "John Doe", age: 70, vulnerability: "Mobility Issues", address: "123 Elm St" },
       { id: 2, name: "Jane Smith", age: 82, vulnerability: "Heart Condition", address: "456 Oak Ave" },
       { id: 3, name: "Robert Brown", age: 65, vulnerability: "Vision Impaired", address: "789 Pine Rd" },
+      { id: 4, name: "Mikaila Jhay Bacolod", age: 75, vulnerability: "Hearing Impaired", address: "321 Maple St" },
+      { id: 5, name: "Raven Luke Quinto", age: 90, vulnerability: "Dementia", address: "654 Cedar Blvd" },
+      { id: 6, name: "Mark Aldwin Uriarte", age: 88, vulnerability: "Alzheimer's", address: "987 Birch Blvd" },
+      { id: 7, name: "John Martin Mendez", age: 72, vulnerability: "Chronic Illness", address: "159 Spruce St" },
+      { id: 8, name: "Mikyllah Mitsudah Grafilon", age: 65, vulnerability: "Mobility Issues", address: "321 Oak St" },
+      { id: 9, name: "Christian Recio", age: 80, vulnerability: "Brokenhearted", address: "654 Willow St" },
+      { id: 10, name: "Justin Jake", age: 78, vulnerability: "Hearing Impairment", address: "159 Birch St" },
+      { id: 11, name: "Jamaeca Bernardo", age: 75, vulnerability: "Hearing Impaired", address: "321 Maple St" },
+      { id: 12, name: "Shane Pepito", age: 68, vulnerability: "Mobility Issues", address: "987 Willow St" },
     ];
     setData(dummyData);
     setFilteredData(dummyData);
