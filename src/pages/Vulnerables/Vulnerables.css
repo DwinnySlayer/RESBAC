@@ -5,3 +5,228 @@
     font-family: sans-serif;
     margin-top: 10px;
 }
+
+/* Layout for table + ID card */
+.content-container {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+/* Left side takes more space */
+.table-container {
+    flex: 2;
+}
+
+/* Right side - fixed width for ID card */
+.id-card {
+    flex: 1;
+    max-width: 360px;
+}
+
+/* ===== Header ===== */
+.header {
+    margin-bottom: 16px;
+}
+
+.welcome-text {
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.admin-name {
+    color: #007BFF;
+}
+
+/* ===== Search + Controls Row ===== */
+.search-controls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.search-bar {
+    width: 300px;
+    height: 36px;
+    background-color: #FAFAFA;
+    border: 1.1px solid #007BFF;
+    padding: 0 16px;
+    border-radius: 50px;
+    transition: border 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.search-bar:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+.vulnerable-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ===== VERIFY ===== */
+.verify {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 32px;
+    font-family: sans-serif;
+}
+
+.verify-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.verify-label {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #e4e4e4;
+    border-radius: 11px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: #555;
+}
+
+.verify-label::before {
+    content: attr(data-off);
+}
+
+input:checked + .verify-label {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+input:checked + .verify-label::before {
+    content: attr(data-on);
+}
+
+/* count */
+.vulnerable-total-count {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    background: #f1f1f1;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+/* ===== Table ===== */
+.vulnerable-data-table {
+    width: 100%;
+    border-collapse: separate; /* keep separate so border-radius works */
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.vulnerable-data-table th,
+.vulnerable-data-table td {
+    padding: 8px;
+    text-align: left;
+    border-top: 1px solid #ddd;     /* horizontal line above */
+    border-bottom: 1px solid #ddd;  /* horizontal line below */
+    border-left: none;              /* hide vertical line */
+    border-right: none;             /* hide vertical line */
+}
+
+/* Remove top border from the first row */
+.vulnerable-data-table thead th {
+    border-top: none;
+}
+
+.vulrow-light {
+    background-color: #F6F7F9;
+}
+
+.vulrow-dark {
+    background-color: #FAFAFA;
+}
+
+/* ID CONTAINER */
+.id-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+    width: 320px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header section */
+.id-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.name {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Status tags */
+.status {
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-top: 6px;
+    font-weight: bold;
+}
+
+.status.pending {
+    background: #ffebee;
+    color: #d32f2f;
+}
+
+.status.verified {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+/* Sections */
+.id-section {
+    margin-bottom: 15px;
+}
+
+.id-section h3 {
+    font-size: 14px;
+    color: #007bff;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+}
+
+.id-section p {
+    font-size: 13px;
+    margin: 4px 0;
+}
+
+.id-section strong {
+    color: #000;
+}
